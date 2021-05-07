@@ -56,7 +56,7 @@ func (of *OpenFaasExecutor) HandleNextNode(partial *executor.PartialState) error
 	httpReq.Header.Add("Content-Type", "application/json")
 	httpReq.Header.Add(util.RequestIdHeader, of.reqID)
 	httpReq.Header.Set(util.CallbackUrlHeader, of.CallbackURL)
-
+	log.Printf("%s\n", httpReq.Header)
 	fmt.Println(fmt.Sprint(of.asyncURL, of.reqID))
 	fmt.Println(httpReq)
 

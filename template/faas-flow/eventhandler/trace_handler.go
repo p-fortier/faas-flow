@@ -24,7 +24,7 @@ type TraceHandler struct {
 // StartReqSpan starts a request span
 func (tracerObj *TraceHandler) StartReqSpan(reqID string) {
 	tracerObj.reqSpan = tracerObj.tracer.StartSpan(reqID)
-	tracerObj.reqSpan.SetTag("request", reqID)
+	tracerObj.reqSpan.SetTag("requestDEFDP", reqID)
 	tracerObj.reqSpanCtx = tracerObj.reqSpan.Context()
 }
 
